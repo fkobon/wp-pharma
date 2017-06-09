@@ -3,16 +3,134 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 15:46+0000\n"
+"POT-Creation-Date: 2017-06-09 17:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
 "Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Loco - https://localise.biz/"
+
+#: inc/acf-fields.php:10
+msgid "Initial Date"
+msgstr ""
+
+#: inc/acf-fields.php:27
+msgid "File"
+msgstr ""
+
+#: inc/acf-fields.php:46
+msgid "Renew"
+msgstr ""
+
+#: inc/cpt-ordo.php:8
+msgctxt "Post Type General Name"
+msgid "Pharmacy prescriptions"
+msgstr ""
+
+#: inc/cpt-ordo.php:9
+msgctxt "Post Type Singular Name"
+msgid "Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:10 inc/cpt-ordo.php:11
+msgid "Pharmacy prescriptions"
+msgstr ""
+
+#: inc/cpt-ordo.php:12
+msgid "Pharmacy prescriptions Archives"
+msgstr ""
+
+#: inc/cpt-ordo.php:13
+msgid "Pharmacy prescription Attributes"
+msgstr ""
+
+#: inc/cpt-ordo.php:14
+msgid "Parent Pharmacy prescription:"
+msgstr ""
+
+#: inc/cpt-ordo.php:15
+msgid "All Pharmacy prescriptions"
+msgstr ""
+
+#: inc/cpt-ordo.php:16
+msgid "Add New Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:17
+msgid "Add Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:18
+msgid "New Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:19
+msgid "Edit Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:20
+msgid "Update Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:21 inc/cpt-ordo.php:22
+msgid "View Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:23
+msgid "Search Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:24
+msgid "Not found"
+msgstr ""
+
+#: inc/cpt-ordo.php:25
+msgid "Not found in Trash"
+msgstr ""
+
+#: inc/cpt-ordo.php:26
+msgid "Featured Image"
+msgstr ""
+
+#: inc/cpt-ordo.php:27
+msgid "Set featured image"
+msgstr ""
+
+#: inc/cpt-ordo.php:28
+msgid "Remove featured image"
+msgstr ""
+
+#: inc/cpt-ordo.php:29
+msgid "Use as featured image"
+msgstr ""
+
+#: inc/cpt-ordo.php:30
+msgid "Insert into Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:31
+msgid "Uploaded to this Pharmacy prescription"
+msgstr ""
+
+#: inc/cpt-ordo.php:32
+msgid "Pharmacy prescriptions list"
+msgstr ""
+
+#: inc/cpt-ordo.php:33
+msgid "Pharmacy prescriptions list navigation"
+msgstr ""
+
+#: inc/cpt-ordo.php:34
+msgid "Filter Pharmacy prescriptions list"
+msgstr ""
+
+#: inc/cpt-ordo.php:37 inc/cpt-ordo.php:38
+msgid "Pharmacy prescription"
+msgstr ""
 
 #. Name of the plugin
 msgid "WP-Pharma"
