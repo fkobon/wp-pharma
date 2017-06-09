@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 17:34+0000\n"
+"POT-Creation-Date: 2017-06-09 17:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -90,22 +90,6 @@ msgstr ""
 
 #: inc/cpt-ordo.php:25
 msgid "Not found in Trash"
-msgstr ""
-
-#: inc/cpt-ordo.php:26
-msgid "Featured Image"
-msgstr ""
-
-#: inc/cpt-ordo.php:27
-msgid "Set featured image"
-msgstr ""
-
-#: inc/cpt-ordo.php:28
-msgid "Remove featured image"
-msgstr ""
-
-#: inc/cpt-ordo.php:29
-msgid "Use as featured image"
 msgstr ""
 
 #: inc/cpt-ordo.php:30
