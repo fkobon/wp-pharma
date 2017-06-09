@@ -38,7 +38,7 @@ add_filter('acf/settings/path', 'wp_pharma_acf_settings_path');
 function wp_pharma_acf_settings_path( $path ) {
 
 	// update path
-	$path = WP_PHARMA_PATH . '/inc/acf/';
+	$path = WP_PHARMA_PATH . '/3rd-party/acf/';
 
 	// return
 	return $path;
@@ -52,7 +52,7 @@ add_filter('acf/settings/dir', 'wp_pharma_acf_settings_dir');
 function wp_pharma_acf_settings_dir( $dir ) {
 
 	// update path
-	$dir = WP_PHARMA_URL . 'inc/acf/';
+	$dir = WP_PHARMA_URL . '/3rd-party/acf/';
 
 	// return
 	return $dir;
@@ -68,7 +68,7 @@ function wp_pharma_acf_settings_dir( $dir ) {
 
 add_action('plugins_loaded', 'wp_pharma_load_acf');
 function wp_pharma_load_acf() {
-	include_once( WP_PHARMA_PATH . 'inc/acf/acf.php' );
+	include_once( WP_PHARMA_PATH . '3rd-party/acf/acf.php' );
 }
 
 /**
