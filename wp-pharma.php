@@ -22,6 +22,12 @@ function wp_pharma_load_textdomain() {
 	load_plugin_textdomain( 'wp-pharma', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
+// Includes Files
+add_action('plugins_loaded','wp_pharma_load_files');
+function wp_pharma_load_files(){
+	require_once WP_PHARMA_PATH . 'inc/cpt-ordo.php';
+}
+
 /**
  * Load ACF PRO
  */
