@@ -23,9 +23,10 @@ function wp_pharma_load_textdomain() {
 }
 
 // Includes Files
-add_action('plugins_loaded','wp_pharma_load_files');
+add_action('plugins_loaded','wp_pharma_load_files', 999);
 function wp_pharma_load_files(){
 	require_once WP_PHARMA_PATH . 'inc/cpt-ordo.php';
+	require_once WP_PHARMA_PATH . 'inc/acf-fields.php';
 }
 
 /**
