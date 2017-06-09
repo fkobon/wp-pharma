@@ -70,3 +70,16 @@ add_action('plugins_loaded', 'wp_pharma_load_acf');
 function wp_pharma_load_acf() {
 	include_once( WP_PHARMA_PATH . 'inc/acf/acf.php' );
 }
+
+/**
+ * Load the theme textdomain
+ *
+ * @author Maxime CULEA
+ * @url https://gist.github.com/MaximeCulea/94fef4ad5ba9338e2586f185e8b6a354
+ * https://www.advancedcustomfields.com/resources/acf-settings/
+ */
+
+function mc_load_theme_textdomain() {
+	load_theme_textdomain( 'wp-pharma', WP_PHARMA_PATH . '/languages' );
+}
+add_filter( 'acf/settings/l10n_textdomain', 'mc_load_theme_textdomain' );
