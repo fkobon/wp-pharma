@@ -115,7 +115,22 @@ function wp_pharma_Updater() {
 /**
  * On activation, creating a custom area page
  */
-
+register_activation_hook( __FILE__, 'wp_pharma_install' );
 function wp_pharma_install(){
+	$customer = array(
+		'post_title'    => __('Customer Area', 'wp_pharma'),
+		'post_content'  => '[customer_area]',
+		'post_status'   => 'publish'
+	);
+	$id = wp_insert_post($customer);
+	update_option('customer_area_id', $id);
+}
 
+/**
+ * On deactivaton page is deleted
+ */
+register_deactivation_hook(__FILE__, 'wp_pharma_deactivate');
+function wp_pharma_deactivate(){
+	$id = get_option('customer_area_id');
+	wp_delete_post($id);
 }
