@@ -15,6 +15,9 @@ define( 'WP_PHARMA_VERSION', '0.1.0' );
 define( 'WP_PHARMA_FOLDER', 'wp-pharma' );
 define( 'WP_PHARMA_URL', plugin_dir_url( __FILE__ ) );
 define( 'WP_PHARMA_PATH', plugin_dir_path( __FILE__ ) );
+define( 'THIVINFO_ITEM_NAME', 'WP-Pharma' );
+define( 'SHOP_URL','https://wp-pharma.com' );
+define( 'WP_PHARMA_AUTHOR', 'wp-pharma.com' );
 
 // Load Languages
 add_action( 'plugins_loaded', 'wp_pharma_load_textdomain');
@@ -22,11 +25,15 @@ function wp_pharma_load_textdomain() {
 	load_plugin_textdomain( 'wp-pharma', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
+
 // Includes Files
 add_action('plugins_loaded','wp_pharma_load_files', 999);
 function wp_pharma_load_files(){
 	require_once WP_PHARMA_PATH . 'inc/cpt-ordo.php';
 	require_once WP_PHARMA_PATH . 'inc/acf-fields.php';
+	require_once WP_PHARMA_PATH . 'inc/admin/settings.php';
+	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-licence.php';
+	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-updater.php';
 }
 
 /**
@@ -83,3 +90,32 @@ function mc_load_theme_textdomain() {
 	load_theme_textdomain( 'wp-pharma', WP_PHARMA_PATH . '/languages' );
 }
 add_filter( 'acf/settings/l10n_textdomain', 'mc_load_theme_textdomain' );
+
+/**
+ * Search for update
+ */
+add_action('admin_init', 'wp_pharma_Updater', 0);
+function wp_pharma_Updater() {
+
+	// retrieve our license key from the DB
+	$license_key = trim(get_option('gestsup_pro_license_key'));
+	//var_dump($license_key);
+
+	// setup the updater
+	$edd_updater = new wp_pharma_Updater(SHOP_URL, __FILE__, array(
+			'version'   => WP_PHARMA_VERSION,
+			'license'   => $license_key,
+			'item_name' => THIVINFO_ITEM_NAME,
+			'author'    => WP_PHARMA_AUTHOR
+		)
+	);
+	//var_dump($edd_updater);
+}
+
+/**
+ * On activation, creating a custom area page
+ */
+
+function wp_pharma_install(){
+
+}
