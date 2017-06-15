@@ -34,6 +34,7 @@ function wp_pharma_load_files(){
 	require_once WP_PHARMA_PATH . 'inc/admin/settings.php';
 	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-licence.php';
 	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-updater.php';
+	require_once WP_PHARMA_PATH . 'inc/shortcode.php';
 }
 
 /**
@@ -133,4 +134,35 @@ register_deactivation_hook(__FILE__, 'wp_pharma_deactivate');
 function wp_pharma_deactivate(){
 	$id = get_option('customer_area_id');
 	wp_delete_post($id);
+}
+
+add_action('wp_enqueue_scripts', 'wp_pharma_load_script');
+function wp_pharma_load_script(){
+	wp_enqueue_script('datepicker', WP_PHARMA_URL .'assets/js/wp_pharma_datepicker.js', array('jquery', 'jquery-ui-datepicker'));
+
+}
+
+add_action('wp_enqueue_scripts', 'wp_pharma_load_style');
+function wp_pharma_load_style(){
+	wp_enqueue_style('wp_pharma', WP_PHARMA_URL .'assets/css/style.css');
+}
+
+add_action('init', 'acf_form_head');
+
+
+/**
+ * Block access to non author of the ordo.
+ */
+
+add_action( 'template_redirect', 'wp_pharma_redirect_post' );
+function wp_pharma_redirect_post() {
+	global $post;
+	$queried_post_type = get_post_type();
+	$author = $post->post_author;
+	$current = get_current_user_id();
+	//var_dump($current);
+	if ( is_single() && 'wp_pharma_ordo' ==  $queried_post_type && $author != $current ) {
+		wp_redirect( home_url(), 301 );
+		exit;
+	}
 }
