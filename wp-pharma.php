@@ -136,12 +136,6 @@ function wp_pharma_deactivate(){
 	wp_delete_post($id);
 }
 
-add_action('wp_enqueue_scripts', 'wp_pharma_load_script');
-function wp_pharma_load_script(){
-	wp_enqueue_script('datepicker', WP_PHARMA_URL .'assets/js/wp_pharma_datepicker.js', array('jquery', 'jquery-ui-datepicker'));
-
-}
-
 add_action('wp_enqueue_scripts', 'wp_pharma_load_style');
 function wp_pharma_load_style(){
 	wp_enqueue_style('wp_pharma', WP_PHARMA_URL .'assets/css/style.css');
