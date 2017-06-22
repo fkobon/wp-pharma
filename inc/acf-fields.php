@@ -1,5 +1,11 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit;
+}
+
 if( function_exists('acf_add_local_field_group') ):
 	acf_add_local_field_group(array (
 		'key' => 'group_593ad0fa39369',

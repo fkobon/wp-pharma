@@ -1,5 +1,11 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit;
+}
+
 add_shortcode( 'customer_area', 'wp_pharma_customer_area_sc' );
 function wp_pharma_customer_area_sc( $atts ) {
 	ob_start();
@@ -15,25 +21,12 @@ function wp_pharma_customer_area_sc( $atts ) {
                     <li><a href="?id=history"> <?php echo $prescription_history_title ?></a></li>
                 </ul>
             </div>
-        <?php if ( ! empty( $_GET['id'] ) && $_GET['id'] == 'upload' ) { ?>
-            <div class="content-customer-area">
-                <?php acf_form( array(
-	                'post_id'      => 'new_post',
-	                'post_title'   => true,
-	                'new_post'     => array(
-		                'post_type'   => 'wp_pharma_ordo',
-		                'post_status' => 'publish'
-	                ),
-	                'submit_value' => __('Ajouter mon annonce', 'twentyfourteen'),
-	                'updated_message'    => '<div class="updated_message"><p>Votre annonce est publiée. Une modération pourra etre apportée si l\'annonce ne corresponds pas à nos critères</p></div>',
-	                'honeypot' => true,
-                ) ); ?>
+        <?php echo wp_pharma_display_form() ?>
+        <?php echo wp_pharma_display_list() ?>
             </div> <?php
-		}
-	} else {
-		$sc = '<p>' . __( 'You\'re not allowed to visit visit page', 'wp_pharma' ) . '</p>';
 
-		return $sc;
+	} else {
+		echo wp_pharma_login();
 	}
 
 	$html = ob_get_contents();
@@ -41,7 +34,7 @@ function wp_pharma_customer_area_sc( $atts ) {
 
 	return $html;
 }
-
+/*
 add_action('wp_handle_upload', 'wp_pharma_get_form');
 function wp_pharma_get_form(){
     if (isset($_POST['submit_prescription'])){
@@ -53,4 +46,4 @@ function wp_pharma_get_form(){
 die(var_dump($movefile));
 
     }
-}
+}*/
