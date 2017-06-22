@@ -1,4 +1,11 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit;
+}
+
 if ( ! function_exists('wp_pharma_ordonnance') ) {
 
 // Register Custom Post Type
@@ -37,7 +44,7 @@ if ( ! function_exists('wp_pharma_ordonnance') ) {
 			'label'                 => __( 'Pharmacy prescription', 'wp-pharma' ),
 			'description'           => __( 'Pharmacy prescription', 'wp-pharma' ),
 			'labels'                => $labels,
-			'supports'              => array( 'title', 'editor', 'author', ),
+			'supports'              => array( 'title', 'author', ),
 			'hierarchical'          => false,
 			'public'                => true,
 			'show_ui'               => true,
@@ -49,7 +56,18 @@ if ( ! function_exists('wp_pharma_ordonnance') ) {
 			'has_archive'           => false,
 			'exclude_from_search'   => true,
 			'publicly_queryable'    => true,
-			'capability_type'       => 'page',
+			"capability_type" => "page",
+			'capabilities' => array(
+				'edit_post'          => 'edit_ordo',
+				'read_post'          => 'read_ordo',
+				'delete_post'        => 'delete_ordo',
+				'edit_posts'         => 'edit_ordos',
+				'edit_others_posts'  => 'edit_others_ordos',
+				'publish_posts'      => 'publish_ordos',
+				'read_private_posts' => 'read_private_ordos',
+				'create_posts'       => 'create_ordos',
+			),
+			"map_meta_cap" => true,
 		);
 		register_post_type( 'wp_pharma_ordo', $args );
 
