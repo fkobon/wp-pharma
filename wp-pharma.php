@@ -35,6 +35,8 @@ function wp_pharma_load_files(){
 	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-licence.php';
 	require_once WP_PHARMA_PATH . 'inc/admin/updater/plugin-updater.php';
 	require_once WP_PHARMA_PATH . 'inc/shortcode.php';
+	require_once WP_PHARMA_PATH . 'inc/functions.php';
+	require_once WP_PHARMA_PATH . 'inc/role.php';
 }
 
 /**
