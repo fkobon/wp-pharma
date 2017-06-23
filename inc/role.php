@@ -21,6 +21,7 @@ function wp_pharma_add_patient_role(){
 	// uncomment to remove role
 	/*	if( get_role('patient') ){
 			remove_role( 'patient' );
+	}
 	*/
 		if ( ! get_role( 'patient' ) ) {
 			add_role( 'patient', 'Patient', array( 'read' => true, 'level_0' => true ) );

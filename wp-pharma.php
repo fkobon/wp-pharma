@@ -162,3 +162,33 @@ function wp_pharma_redirect_post() {
 		exit;
 	}
 }
+
+/**
+ * Fired on deactivation:
+ * - Remove Custom Role "Patient"
+ */
+register_deactivation_hook(__FILE__, 'wp_pharma_deactivation');
+function wp_pharma_deactivation(){
+	/**
+	 * Remove Custom Role "Patient"
+	 */
+
+	if( get_role('patient') ){
+		$users = get_users(
+			array(
+				'role' => 'patient',
+			)
+		);
+
+		/**
+		 * update user with subscriber role
+		 */
+
+		foreach ($users as $user){
+			wp_update_user(array('ID' => $user->data->ID, 'role' => 'subscriber'));
+		}
+
+		//var_dump($users); die;
+		remove_role( 'patient' );
+	}
+}
