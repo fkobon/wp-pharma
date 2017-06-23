@@ -123,11 +123,12 @@ function wp_pharma_Updater() {
 register_activation_hook( __FILE__, 'wp_pharma_install' );
 function wp_pharma_install(){
 
-	if ( ! empty(get_option('customer_area_id')) ) {
+	if ( empty(get_option('customer_area_id')) ) {
 		$customer = array(
 			'post_title'   => __( 'Customer Area', 'wp_pharma' ),
 			'post_content' => '[customer_area]',
-			'post_status'  => 'publish'
+			'post_status'  => 'publish',
+			'post_type' => 'page',
 		);
 		$id       = wp_insert_post( $customer );
 		update_option( 'customer_area_id', $id );
