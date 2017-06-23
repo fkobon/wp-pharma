@@ -120,23 +120,19 @@ function wp_pharma_Updater() {
  */
 register_activation_hook( __FILE__, 'wp_pharma_install' );
 function wp_pharma_install(){
-	$customer = array(
-		'post_title'    => __('Customer Area', 'wp_pharma'),
-		'post_content'  => '[customer_area]',
-		'post_status'   => 'publish'
-	);
-	$id = wp_insert_post($customer);
-	update_option('customer_area_id', $id);
+
+	if ( ! empty(get_option('customer_area_id')) ) {
+		$customer = array(
+			'post_title'   => __( 'Customer Area', 'wp_pharma' ),
+			'post_content' => '[customer_area]',
+			'post_status'  => 'publish'
+		);
+		$id       = wp_insert_post( $customer );
+		update_option( 'customer_area_id', $id );
+	}
 }
 
-/**
- * On deactivaton page is deleted
- */
-register_deactivation_hook(__FILE__, 'wp_pharma_deactivate');
-function wp_pharma_deactivate(){
-	$id = get_option('customer_area_id');
-	wp_delete_post($id);
-}
+
 
 add_action('wp_enqueue_scripts', 'wp_pharma_load_style');
 function wp_pharma_load_style(){
@@ -191,4 +187,12 @@ function wp_pharma_deactivation(){
 		//var_dump($users); die;
 		remove_role( 'patient' );
 	}
+
+	/**
+	 * On deactivaton page is deleted
+	 */
+
+		$id = get_option('customer_area_id');
+		wp_delete_post($id);
+		delete_option('customer_area_id');
 }
