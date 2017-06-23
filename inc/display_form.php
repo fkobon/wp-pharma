@@ -13,9 +13,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function wp_pharma_display_form() {
-	if ( ! empty( $_GET['id'] ) && $_GET['id'] == 'upload' ) { ?>
-		<div class="content-customer-area">
-		<?php acf_form( array(
+	do_action('wp_pharma_before_form');
+	if ( ! empty( $_GET['id'] ) && $_GET['id'] == 'upload' ) {
+		acf_form( array(
 			'post_id'         => 'new_post',
 			'post_title'      => true,
 			'new_post'        => array(
@@ -27,6 +27,7 @@ function wp_pharma_display_form() {
 			'honeypot'        => true,
 		) );
 	}
+	do_action('wp_pharma_after_form');
 }
 
 function wp_pharma_prepare_title( $title ) {

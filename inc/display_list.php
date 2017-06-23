@@ -44,8 +44,7 @@ function wp_pharma_get_prescription(){
 
 function wp_pharma_display_list(){
 	if ( ! empty( $_GET['id'] ) && $_GET['id'] == 'history' ) { ?>
-		<div class="content-customer-area">
+
 			<?php echo wp_pharma_get_prescription(); ?>
-		</div>
 	<?php }
 }

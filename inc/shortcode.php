@@ -21,8 +21,12 @@ function wp_pharma_customer_area_sc( $atts ) {
                     <li><a href="?id=history"> <?php echo $prescription_history_title ?></a></li>
                 </ul>
             </div>
+        <div class="content-customer-area <?php
+		echo apply_filters( 'wp_pharma_display_class', $class = '' );
+		?>">
         <?php echo wp_pharma_display_form() ?>
         <?php echo wp_pharma_display_list() ?>
+        </div>
             </div> <?php
 
 	} else {
@@ -34,16 +38,3 @@ function wp_pharma_customer_area_sc( $atts ) {
 
 	return $html;
 }
-/*
-add_action('wp_handle_upload', 'wp_pharma_get_form');
-function wp_pharma_get_form(){
-    if (isset($_POST['submit_prescription'])){
-
-
-	    $uploadedfile = $_FILES['prescription_file'];
-	    $movefile = wp_handle_upload( $uploadedfile );
-
-die(var_dump($movefile));
-
-    }
-}*/
