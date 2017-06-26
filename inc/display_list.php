@@ -31,7 +31,13 @@ function wp_pharma_get_prescription(){
 		while ( $query->have_posts() ) {
 			$query->the_post(); ?>
 			<div class="prescription_item">
-				<?php the_title(); ?>
+				<?php
+                $ordo = get_field('wp_pharma_file');
+                //var_dump($ordo);
+
+                the_title(); echo ' ';
+                echo '<a href="' . $ordo['url'] . '">' . __('Display', 'wp-pharma').'</a>'.
+                     edit_post_link(__('Edit', 'wp-pharma'),' ', ' '); ?>
 			</div>
 		<?php }
 	} else {
