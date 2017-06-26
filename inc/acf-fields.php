@@ -66,25 +66,7 @@ if( function_exists('acf_add_local_field_group') ):
 				'max_size' => '',
 				'mime_types' => 'jpg, jpeg, pdf',
 			),
-			array (
-				'key' => 'field_593ad1a694a3d',
-				'label' => __('Renew','wp-pharma'),
-				'name' => 'wp_pharma_renew',
-				'type' => 'true_false',
-				'instructions' => __('','wp-pharma'),
-				'required' => 0,
-				'conditional_logic' => 0,
-				'wrapper' => array (
-					'width' => '',
-					'class' => '',
-					'id' => '',
-				),
-				'message' => '',
-				'default_value' => 0,
-				'ui' => 0,
-				'ui_on_text' => '',
-				'ui_off_text' => '',
-			),
+
 		),
 		'location' => array (
 			array (
