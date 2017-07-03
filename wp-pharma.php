@@ -39,6 +39,13 @@ function wp_pharma_load_files(){
 	require_once WP_PHARMA_PATH . 'inc/role.php';
 	require_once WP_PHARMA_PATH . 'inc/display_list.php';
 	require_once WP_PHARMA_PATH . 'inc/display_form.php';
+
+	/**
+	 * Add Woocommerce support
+	 */
+	if (  class_exists( 'WooCommerce' ) ) {
+		require_once WP_PHARMA_PATH . 'inc/add-endpoint-ordo.php';
+	}
 }
 
 /**
