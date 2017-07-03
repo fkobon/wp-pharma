@@ -57,6 +57,30 @@
                 "min_size": "",
                 "max_size": "",
                 "mime_types": "jpg, jpeg, pdf"
+            },
+            {
+                "key": "field_59509f832bc0a",
+                "label": "Is it a renew?",
+                "name": "wp_pharma_renew",
+                "type": "radio",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": [
+                    "No",
+                    "Yes"
+                ],
+                "allow_null": 1,
+                "other_choice": 0,
+                "save_other_choice": 0,
+                "default_value": "",
+                "layout": "horizontal",
+                "return_format": "value"
             }
         ],
         "location": [
