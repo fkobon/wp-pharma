@@ -3,7 +3,7 @@
 Plugin Name: WP-Pharma
 Plugin URI: To Be Customized
 Description: To Be Customized
-Version: 0.1.0
+Version: 1.0.0
 Author: Sébastien SERRE
 Author URI: http://www.thivinfo.com
 Text Domain: wp-pharma
@@ -11,13 +11,13 @@ Domain Path: /languages
  */
 
 // Plugin constants
-define( 'WP_PHARMA_VERSION', '0.1.0' );
+define( 'WP_PHARMA_VERSION', '1.0.0' );
 define( 'WP_PHARMA_FOLDER', 'wp-pharma' );
 define( 'WP_PHARMA_URL', plugin_dir_url( __FILE__ ) );
 define( 'WP_PHARMA_PATH', plugin_dir_path( __FILE__ ) );
 define( 'THIVINFO_ITEM_NAME', 'WP-Pharma' );
-define( 'SHOP_URL','https://wp-pharma.com' );
-define( 'WP_PHARMA_AUTHOR', 'wp-pharma.com' );
+define( 'SHOP_URL','https://www.thivinfo.com' );
+define( 'WP_PHARMA_AUTHOR', 'thivinfo.com' );
 
 // Load Languages
 add_action( 'plugins_loaded', 'wp_pharma_load_textdomain');
@@ -80,7 +80,7 @@ function wp_pharma_acf_settings_dir( $dir ) {
 
 
 // 3. Hide ACF field group menu item
-//add_filter('acf/settings/show_admin', '__return_false');
+add_filter('acf/settings/show_admin', '__return_false');
 
 
 // 4. Include ACF
