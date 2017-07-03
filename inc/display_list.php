@@ -33,7 +33,6 @@ function wp_pharma_get_prescription(){
 			<div class="prescription_item">
 				<?php
                 $ordo = get_field('wp_pharma_file');
-                //var_dump($ordo);
 
                 the_title(); echo ' ';
                 echo '<a href="' . $ordo['url'] . '">' . __('Display', 'wp-pharma').'</a>'.
