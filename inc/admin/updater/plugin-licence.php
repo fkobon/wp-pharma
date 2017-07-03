@@ -1,7 +1,7 @@
 <?php
 
 function wp_pharma_license_menu() {
-    add_submenu_page('wp-pharma', __('License','wp_pharma'), __('License','wp_pharma'), 'manage_options', 'wp_pharma-license', 'wp_pharma_license_page' );
+    add_submenu_page('wp-pharma', __('License','wp-pharma'), __('License','wp-pharma'), 'manage_options', 'wp_pharma-license', 'wp_pharma_license_page' );
 }
 add_action('admin_menu', 'wp_pharma_license_menu', 20);
 
@@ -13,19 +13,19 @@ function wp_pharma_license_page() {
 
 		<form class="wp_pharma-option" method="post" action="options.php">
 
-			<h1><span class="dashicons dashicons-admin-network"></span><?php _e('Plugin License Options','wp_pharma'); ?></h1>
+			<h1><span class="dashicons dashicons-admin-network"></span><?php _e('Plugin License Options','wp-pharma'); ?></h1>
 
 			<?php settings_fields('wp_pharma_license'); ?>
-			<p><?php _e('The license key is used to access automatic updates and support.','wp_pharma'); ?></p>
-			<p><?php _e('Trouble to activate your licence key? Do it manually by adding your website to your WP-Pharma account','wp_pharma'); ?><br><br><a href="https://www.thivinfo.com/compte" class="button" target="_blank"><?php _e('Activate manually','wp_pharma'); ?></a></p>
+			<p><?php _e('The license key is used to access automatic updates and support.','wp-pharma'); ?></p>
+			<p><?php _e('Trouble to activate your licence key? Do it manually by adding your website to your WP-Pharma account','wp-pharma'); ?><br><br><a href="https://www.thivinfo.com/compte" class="button" target="_blank"><?php _e('Activate manually','wp-pharma'); ?></a></p>
 			<table class="form-table">
 				<tbody>
 					<tr valign="top">
 						<th scope="row" valign="top">
-							<?php _e('License Key','wp_pharma'); ?>
+							<?php _e('License Key','wp-pharma'); ?>
 						</th>
 						<td>
-                            <label class="description" for="wp_pharma_license_key"><?php _e('Enter your license key','wp_pharma'); ?></label>
+                            <label class="description" for="wp_pharma_license_key"><?php _e('Enter your license key','wp-pharma'); ?></label>
 							<input id="wp_pharma_license_key" name="wp_pharma_license_key" type="text" class="regular-text" value="<?php esc_attr_e( $license ); ?>" />
 
 						</td>
@@ -33,17 +33,17 @@ function wp_pharma_license_page() {
 					<?php if( false !== $license ) { ?>
 						<tr valign="top">
 							<th scope="row" valign="top">
-								<?php _e('Activate License','wp_pharma'); ?>
+								<?php _e('Activate License','wp-pharma'); ?>
 							</th>
 							<td>
 								<?php if( $status !== false && $status == 'valid' ) { ?>
 									<span style="color: green;vertical-align: middle;margin: 0 0 0 10px;line-height: 30px;font-style: italic;font-weight: bold;"><?php _e('active'); ?></span>
 									<?php wp_nonce_field( 'wp_pharma_nonce', 'wp_pharma_nonce' ); ?>
-									<input id="wp_pharma-edd-license-btn" type="submit" class="button-secondary" name="wp_pharma_license_deactivate" value="<?php _e('Deactivate License','wp_pharma'); ?>"/>
+									<input id="wp_pharma-edd-license-btn" type="submit" class="button-secondary" name="wp_pharma_license_deactivate" value="<?php _e('Deactivate License','wp-pharma'); ?>"/>
 									<div class="spinner"></div>
 								<?php } else {
 									wp_nonce_field( 'wp_pharma_nonce', 'wp_pharma_nonce' ); ?>
-									<input id="wp_pharma-edd-license-btn" type="submit" class="button-secondary" name="wp_pharma_license_activate" value="<?php _e('Activate License','wp_pharma'); ?>"/>
+									<input id="wp_pharma-edd-license-btn" type="submit" class="button-secondary" name="wp_pharma_license_activate" value="<?php _e('Activate License','wp-pharma'); ?>"/>
 									<div class="spinner"></div>
 								<?php } ?>
 							</td>

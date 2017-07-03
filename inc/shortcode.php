@@ -10,8 +10,8 @@ add_shortcode( 'customer_area', 'wp_pharma_customer_area_sc' );
 function wp_pharma_customer_area_sc( $atts ) {
 	ob_start();
 	if ( is_user_logged_in() ) {
-		$prescription_upload_menu_title = apply_filters( 'prescription_upload', __( 'Upload a Pharmacy prescription', 'wp_pharma' ) );
-		$prescription_history_title     = apply_filters( 'prescription_history', __( 'My pharmacy prescription', 'wp_pharma' ) );
+		$prescription_upload_menu_title = apply_filters( 'prescription_upload', __( 'Upload a Pharmacy prescription', 'wp-pharma' ) );
+		$prescription_history_title     = apply_filters( 'prescription_history', __( 'My Pharmacy Prescription', 'wp-pharma' ) );
 
 
 			?>

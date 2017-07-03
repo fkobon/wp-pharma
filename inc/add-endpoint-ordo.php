@@ -64,7 +64,7 @@ class wp_pharma_classified_add_endpoint {
 
 		if ( $is_endpoint && ! is_admin() && is_main_query() && in_the_loop() && is_account_page() ) {
 			// New page title.
-			$title = __( 'My Pharmacy Prescription', 'wp_pharma' );
+			$title = __( 'My Pharmacy Prescription', 'wp-pharma' );
 
 			remove_filter( 'the_title', array( $this, 'endpoint_title' ) );
 		}
@@ -83,7 +83,7 @@ class wp_pharma_classified_add_endpoint {
 		$logout = $items['customer-logout'];
 		unset( $items['customer-logout'] );
 		// Insert your custom endpoint.
-		$items[ self::$endpoint ] = __( 'My Pharmacy Prescription', 'wp_pharma' );
+		$items[ self::$endpoint ] = __( 'My Pharmacy Prescription', 'wp-pharma' );
 
 		// Insert back the logout item.
 		$items['customer-logout'] = $logout;

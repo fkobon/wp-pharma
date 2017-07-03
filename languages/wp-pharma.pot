@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 17:51+0000\n"
+"POT-Creation-Date: 2017-07-03 05:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,106 +14,187 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: inc/acf-fields.php:10
+#: inc/add-endpoint-ordo.php:67 inc/add-endpoint-ordo.php:86
+#: inc/shortcode.php:14
+msgid "My Pharmacy Prescription"
+msgstr ""
+
+#: inc/shortcode.php:13
+msgid "Upload a Pharmacy prescription"
+msgstr ""
+
+#: inc/display_list.php:38
+msgid "Display"
+msgstr ""
+
+#: inc/display_list.php:39
+msgid "Edit"
+msgstr ""
+
+#: inc/acf-fields.php:16
 msgid "Initial Date"
 msgstr ""
 
-#: inc/acf-fields.php:27
+#: inc/acf-fields.php:33
+msgid "Description"
+msgstr ""
+
+#: inc/acf-fields.php:36
+msgid "Add here more info for the pharmacist"
+msgstr ""
+
+#: inc/acf-fields.php:52
 msgid "File"
 msgstr ""
 
-#: inc/acf-fields.php:46
-msgid "Renew"
+#: inc/acf-fields.php:71
+msgid "Is it a renew?"
 msgstr ""
 
-#: inc/cpt-ordo.php:8
+#: inc/acf-fields.php:83
+msgid "No"
+msgstr ""
+
+#: inc/acf-fields.php:84
+msgid "Yes"
+msgstr ""
+
+#: inc/cpt-ordo.php:15
 msgctxt "Post Type General Name"
 msgid "Pharmacy prescriptions"
 msgstr ""
 
-#: inc/cpt-ordo.php:9
+#: inc/cpt-ordo.php:16
 msgctxt "Post Type Singular Name"
 msgid "Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:10 inc/cpt-ordo.php:11
+#: inc/cpt-ordo.php:17 inc/cpt-ordo.php:18
 msgid "Pharmacy prescriptions"
 msgstr ""
 
-#: inc/cpt-ordo.php:12
+#: inc/cpt-ordo.php:19
 msgid "Pharmacy prescriptions Archives"
 msgstr ""
 
-#: inc/cpt-ordo.php:13
+#: inc/cpt-ordo.php:20
 msgid "Pharmacy prescription Attributes"
 msgstr ""
 
-#: inc/cpt-ordo.php:14
+#: inc/cpt-ordo.php:21
 msgid "Parent Pharmacy prescription:"
 msgstr ""
 
-#: inc/cpt-ordo.php:15
+#: inc/cpt-ordo.php:22
 msgid "All Pharmacy prescriptions"
 msgstr ""
 
-#: inc/cpt-ordo.php:16
+#: inc/cpt-ordo.php:23
 msgid "Add New Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:17
+#: inc/cpt-ordo.php:24
 msgid "Add Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:18
+#: inc/cpt-ordo.php:25
 msgid "New Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:19
+#: inc/cpt-ordo.php:26
 msgid "Edit Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:20
+#: inc/cpt-ordo.php:27
 msgid "Update Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:21 inc/cpt-ordo.php:22
+#: inc/cpt-ordo.php:28 inc/cpt-ordo.php:29
 msgid "View Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:23
+#: inc/cpt-ordo.php:30
 msgid "Search Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:24
+#: inc/cpt-ordo.php:31
 msgid "Not found"
 msgstr ""
 
-#: inc/cpt-ordo.php:25
+#: inc/cpt-ordo.php:32
 msgid "Not found in Trash"
 msgstr ""
 
-#: inc/cpt-ordo.php:30
+#: inc/cpt-ordo.php:37
 msgid "Insert into Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:31
+#: inc/cpt-ordo.php:38
 msgid "Uploaded to this Pharmacy prescription"
 msgstr ""
 
-#: inc/cpt-ordo.php:32
+#: inc/cpt-ordo.php:39
 msgid "Pharmacy prescriptions list"
 msgstr ""
 
-#: inc/cpt-ordo.php:33
+#: inc/cpt-ordo.php:40
 msgid "Pharmacy prescriptions list navigation"
 msgstr ""
 
-#: inc/cpt-ordo.php:34
+#: inc/cpt-ordo.php:41
 msgid "Filter Pharmacy prescriptions list"
 msgstr ""
 
-#: inc/cpt-ordo.php:37 inc/cpt-ordo.php:38
+#: inc/cpt-ordo.php:44 inc/cpt-ordo.php:45
 msgid "Pharmacy prescription"
+msgstr ""
+
+#: inc/admin/settings.php:24
+msgid "Licence Key"
+msgstr ""
+
+#: inc/admin/settings.php:26
+msgid "Add your licence key"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:4
+#: inc/admin/updater/plugin-licence.php:4
+msgid "License"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:16
+msgid "Plugin License Options"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:19
+msgid "The license key is used to access automatic updates and support."
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:20
+msgid ""
+"Trouble to activate your licence key? Do it manually by adding your website "
+"to your WP-Pharma account"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:20
+msgid "Activate manually"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:25
+msgid "License Key"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:28
+msgid "Enter your license key"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:36
+#: inc/admin/updater/plugin-licence.php:46
+msgid "Activate License"
+msgstr ""
+
+#: inc/admin/updater/plugin-licence.php:42
+msgid "Deactivate License"
 msgstr ""
 
 #. Name of the plugin

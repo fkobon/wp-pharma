@@ -22,7 +22,7 @@ define( 'WP_PHARMA_AUTHOR', 'wp-pharma.com' );
 // Load Languages
 add_action( 'plugins_loaded', 'wp_pharma_load_textdomain');
 function wp_pharma_load_textdomain() {
-	load_plugin_textdomain( 'wp-pharma', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	$lang=load_plugin_textdomain( 'wp-pharma', false, dirname(plugin_basename(__FILE__))."/languages" );
 }
 
 
