@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-03 05:14+0000\n"
+"POT-Creation-Date: 2017-07-04 04:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -57,6 +57,14 @@ msgstr ""
 
 #: inc/acf-fields.php:84
 msgid "Yes"
+msgstr ""
+
+#: inc/display_form.php:25
+msgid "Add a prescription"
+msgstr ""
+
+#: inc/display_form.php:26
+msgid "Presciption well received"
 msgstr ""
 
 #: inc/cpt-ordo.php:15

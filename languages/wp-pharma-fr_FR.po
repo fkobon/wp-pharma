@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WP-Pharma\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-03 05:14+0000\n"
-"PO-Revision-Date: 2017-07-03 05:16+0000\n"
+"POT-Creation-Date: 2017-07-04 04:45+0000\n"
+"PO-Revision-Date: 2017-07-04 04:46+0000\n"
 "Last-Translator: sebastienserre <sebastien@thivinfo.com>\n"
 "Language-Team: French (France)\n"
 "Language: fr-FR\n"
@@ -13,46 +13,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: inc/admin/updater/plugin-licence.php:4
-#: inc/admin/updater/plugin-licence.php:4
-msgid "License"
-msgstr "Licence"
+#: inc/display_form.php:25
+msgid "Add a prescription"
+msgstr "Ajouter une ordonnance"
 
-#: inc/admin/updater/plugin-licence.php:16
-msgid "Plugin License Options"
-msgstr "Options de licence"
-
-#: inc/admin/updater/plugin-licence.php:19
-msgid "The license key is used to access automatic updates and support."
-msgstr ""
-"la clé de licence est utilisée pour obtenir du support et les mises à jour."
-
-#: inc/admin/updater/plugin-licence.php:20
-msgid ""
-"Trouble to activate your licence key? Do it manually by adding your website "
-"to your WP-Pharma account"
-msgstr "Il y a eu un problème lors de l'activation de la clé de licence?"
-
-#: inc/admin/updater/plugin-licence.php:20
-msgid "Activate manually"
-msgstr "Activer manuellement"
-
-#: inc/admin/updater/plugin-licence.php:25
-msgid "License Key"
-msgstr "Clé de licence"
-
-#: inc/admin/updater/plugin-licence.php:28
-msgid "Enter your license key"
-msgstr "Saisissez votre clé de licence"
-
-#: inc/admin/updater/plugin-licence.php:36
-#: inc/admin/updater/plugin-licence.php:46
-msgid "Activate License"
-msgstr "Activer la licence"
-
-#: inc/admin/updater/plugin-licence.php:42
-msgid "Deactivate License"
-msgstr "Désactiver la licence"
+#: inc/display_form.php:26
+msgid "Presciption well received"
+msgstr "Ordonnance bien reçue"
 
 #: inc/add-endpoint-ordo.php:67 inc/add-endpoint-ordo.php:86
 #: inc/shortcode.php:14
@@ -196,6 +163,47 @@ msgstr "Clé de licence"
 #: inc/admin/settings.php:26
 msgid "Add your licence key"
 msgstr "Ajoutez votre clé de licence"
+
+#: inc/admin/updater/plugin-licence.php:4
+#: inc/admin/updater/plugin-licence.php:4
+msgid "License"
+msgstr "Licence"
+
+#: inc/admin/updater/plugin-licence.php:16
+msgid "Plugin License Options"
+msgstr "Options de licence"
+
+#: inc/admin/updater/plugin-licence.php:19
+msgid "The license key is used to access automatic updates and support."
+msgstr ""
+"la clé de licence est utilisée pour obtenir du support et les mises à jour."
+
+#: inc/admin/updater/plugin-licence.php:20
+msgid ""
+"Trouble to activate your licence key? Do it manually by adding your website "
+"to your WP-Pharma account"
+msgstr "Il y a eu un problème lors de l'activation de la clé de licence?"
+
+#: inc/admin/updater/plugin-licence.php:20
+msgid "Activate manually"
+msgstr "Activer manuellement"
+
+#: inc/admin/updater/plugin-licence.php:25
+msgid "License Key"
+msgstr "Clé de licence"
+
+#: inc/admin/updater/plugin-licence.php:28
+msgid "Enter your license key"
+msgstr "Saisissez votre clé de licence"
+
+#: inc/admin/updater/plugin-licence.php:36
+#: inc/admin/updater/plugin-licence.php:46
+msgid "Activate License"
+msgstr "Activer la licence"
+
+#: inc/admin/updater/plugin-licence.php:42
+msgid "Deactivate License"
+msgstr "Désactiver la licence"
 
 #. Name of the plugin
 msgid "WP-Pharma"

@@ -34,6 +34,7 @@ function wp_pharma_prepare_title( $title ) {
 	// override value
 	if (get_post_type() == 'wp_pharma_ordo') {
 		$date  = get_field( 'wp_pharma_initial_date' );
+		//var_dump($date);
 		$title = $title . '-' . $date;
 	}
 

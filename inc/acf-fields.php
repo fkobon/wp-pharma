@@ -14,7 +14,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_593ad12394a3b',
 				'label' => __('Initial Date', 'wp-pharma'),
-				'name' => 'wp-pharma_initial_date',
+				'name' => 'wp_pharma_initial_date',
 				'type' => 'date_picker',
 				'instructions' => __('','wp-pharma'),
 				'required' => 1,
@@ -31,7 +31,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_5948b0c550de9',
 				'label' => __('Description', 'wp-pharma'),
-				'name' => 'wp-pharma_desc',
+				'name' => 'wp_pharma_desc',
 				'type' => 'wysiwyg',
 				'instructions' => __('Add here more info for the pharmacist','wp-pharma'),
 				'required' => 0,
@@ -50,7 +50,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_593ad14e94a3c',
 				'label' => __('File','wp-pharma'),
-				'name' => 'wp-pharma_file',
+				'name' => 'wp_pharma_file',
 				'type' => 'file',
 				'instructions' => __('','wp-pharma'),
 				'required' => 1,
@@ -69,7 +69,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array (
 				'key' => 'field_59509f832bc0a',
 				'label' => __('Is it a renew?','wp-pharma'),
-				'name' => 'wp-pharma_renew',
+				'name' => 'wp_pharma_renew',
 				'type' => 'radio',
 				'instructions' => '',
 				'required' => 1,
@@ -97,7 +97,7 @@ if( function_exists('acf_add_local_field_group') ):
 				array (
 					'param' => 'post_type',
 					'operator' => '==',
-					'value' => 'wp-pharma_ordo',
+					'value' => 'wp_pharma_ordo',
 				),
 			),
 		),
